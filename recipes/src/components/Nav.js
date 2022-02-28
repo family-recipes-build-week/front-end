@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+import SearchBar from './SearchBar';
+
 const NavbarWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -35,6 +37,7 @@ const Button = styled.button`
 
 const Navbar = () => {
   return (
+    <div>
     <NavbarWrapper>
       <Link to='/'>
         <Title>Grandma's Secret Recipes</Title>
@@ -47,7 +50,9 @@ const Navbar = () => {
           <Button>Get Started</Button>
         </Link>
       </ButtonGroup>
+      <SearchBar/>
     </NavbarWrapper>
+    </div>
   );
 };
 
